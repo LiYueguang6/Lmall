@@ -1,6 +1,6 @@
 package com.lyg.lmall.user.mapper;
 
-import com.lyg.lmall.user.bean.UmsMemberReceiveAddress;
+import com.lyg.lmall.bean.UmsMemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
 
 

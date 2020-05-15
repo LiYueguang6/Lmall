@@ -1,11 +1,10 @@
 package com.lyg.lmall.user.controller;
 
-import com.lyg.lmall.user.bean.UmsMember;
-import com.lyg.lmall.user.bean.UmsMemberReceiveAddress;
-import com.lyg.lmall.user.service.UserService;
+import com.lyg.lmall.service.UserService;
+import com.lyg.lmall.bean.UmsMember;
+import com.lyg.lmall.bean.UmsMemberReceiveAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -26,13 +25,13 @@ public class UserController {
     @ResponseBody
     @RequestMapping("getReceiveAddressByMemberId")
     public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId){
-        List<UmsMemberReceiveAddress> umsMemberReceiveAddress = userService.getReceiveAddressByMemberId(memberId);
-        return umsMemberReceiveAddress;
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddresses;
     }
 
     @ResponseBody
-    @RequestMapping("index")
+    @RequestMapping({"index",""})
     public String index(){
-        return "Hello user";
+        return "Hello 单茗琪";
     }
 }

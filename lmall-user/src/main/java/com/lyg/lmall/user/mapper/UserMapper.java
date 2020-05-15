@@ -1,6 +1,6 @@
 package com.lyg.lmall.user.mapper;
 
-import com.lyg.lmall.user.bean.UmsMember;
+import com.lyg.lmall.bean.UmsMember;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

@@ -1,13 +1,12 @@
 package com.lyg.lmall.user.service.impl;
 
-import com.lyg.lmall.user.bean.UmsMember;
-import com.lyg.lmall.user.bean.UmsMemberReceiveAddress;
+import com.lyg.lmall.service.UserService;
+import com.lyg.lmall.bean.UmsMember;
+import com.lyg.lmall.bean.UmsMemberReceiveAddress;
 import com.lyg.lmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.lyg.lmall.user.mapper.UserMapper;
-import com.lyg.lmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -27,13 +26,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId) {
+//        Example一般和update一起用
 //        Example e = new Example(UmsMemberReceiveAddress.class);
 //        e.createCriteria().andEqualTo("memberId",memberId);
-//        umsMemberReceiveAddressMapper.selectByExample(e);
+//        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.selectByExample(e);
         UmsMemberReceiveAddress umsMemberReceiveAddress = new UmsMemberReceiveAddress();
         umsMemberReceiveAddress.setMemberId(memberId);
         List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
 
         return umsMemberReceiveAddresses;
     }
+
 }
