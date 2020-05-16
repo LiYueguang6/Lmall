@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LmallUserApplicationTests {
+class LmallUserServiceApplicationTests {
 
     @Test
     void contextLoads() {

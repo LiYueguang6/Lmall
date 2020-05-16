@@ -1,5 +1,6 @@
 package com.lyg.lmall.user.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.lyg.lmall.service.UserService;
 import com.lyg.lmall.bean.UmsMember;
 import com.lyg.lmall.bean.UmsMemberReceiveAddress;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class UserController {
-    @Autowired
+    @Reference
     UserService userService;
 
     @ResponseBody
