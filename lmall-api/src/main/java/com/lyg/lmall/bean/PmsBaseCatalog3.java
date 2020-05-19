@@ -1,18 +1,29 @@
 package com.lyg.lmall.bean;
 
 
-public class PmsBaseCatalog3 {
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 
-  private long id;
+public class PmsBaseCatalog3 implements Serializable {
+
+  @Id
+  @Column
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private String id;
+  @Column
   private String name;
-  private long catalog2Id;
+  @Column
+  private String catalog2Id;
 
 
-  public long getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(String id) {
     this.id = id;
   }
 
@@ -26,11 +37,11 @@ public class PmsBaseCatalog3 {
   }
 
 
-  public long getCatalog2Id() {
+  public String getCatalog2Id() {
     return catalog2Id;
   }
 
-  public void setCatalog2Id(long catalog2Id) {
+  public void setCatalog2Id(String catalog2Id) {
     this.catalog2Id = catalog2Id;
   }
 
