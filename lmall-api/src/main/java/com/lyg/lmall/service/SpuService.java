@@ -10,5 +10,5 @@ public interface SpuService {
 
     List<PmsBaseSaleAttr> baseSaleAttrList();
 
-    List<PmsProductInfo> saveSpuInfo(PmsProductInfo pmsProductInfo);
+    void saveSpuInfo(PmsProductInfo pmsProductInfo);
 }

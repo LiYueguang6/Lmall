@@ -33,7 +33,7 @@ public class SpuController {
     @RequestMapping("saveSpuInfo")
     @ResponseBody
     public String saveSpuInfo(@RequestBody PmsProductInfo pmsProductInfo){
-        List<PmsProductInfo> pmsProductInfoList = spuService.saveSpuInfo(pmsProductInfo);
+        spuService.saveSpuInfo(pmsProductInfo);
         return "success";
     }
     @RequestMapping("fileUpload")

@@ -15,7 +15,7 @@ public class PmsUploadUtil {
         String url = "http://39.98.47.42";
         // 上传图片到服务器
         // 从配置文件中获取tracker的路径
-        String tracker = PmsUploadUtil.class.getResource("./tracker.conf").getPath();
+        String tracker = PmsUploadUtil.class.getResource("/tracker.conf").getPath();
         try {
             ClientGlobal.init(tracker);
         } catch (IOException e) {
